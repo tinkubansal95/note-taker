@@ -36,9 +36,10 @@ app.post('/api/notes', (req, res) => {
         if(item.id === req.params.id)  
         {
             dbData.splice(index,1);
+            res.json(true);
         }
     })
-    res.json(true);
+    
   });
 
 app.listen(PORT, () => console.log(`https://www.localhost:${PORT}`));
